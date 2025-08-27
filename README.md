@@ -1,11 +1,12 @@
 # Adapter Pattern - Media Player Example
 
 This project demonstrates the **Adapter Design Pattern** in Java using a Media Player example.
+The Adapter pattern is a structural design pattern that allows objects with incompatible interfaces to collaborate by converting the interface of one class (the adaptee) into another interface expected by the client (the target).
 
 ## Project Structure
 - **MediaPlayer (Interface)** – Defines the play method.  
 - **AudioPlayer** – Implements `MediaPlayer`, supports playing MP3 files.  
-- **VideoPlayer** – A separate class that plays MP4 files, but does not implement `MediaPlayer`.  
+- **LegacyVideoPlayer** – A separate class that plays MP4 files, but does not implement `MediaPlayer`.  
 - **VideoPlayerAdapter** – Implements `MediaPlayer` and adapts `VideoPlayer` so it can be used as a `MediaPlayer`.  
 - **AdapterPatternDemo** – Main class to test the functionality.
 
@@ -24,12 +25,11 @@ To build and test this project, you will need:
    ```bash
    git clone https://github.com/your-username/your-repository-name.git
 2. Navigate to the project directory:
+   ```bash
+      cd your-repository-name
 
-   cd your-repository-name
-
-##Verification Commands
-
-This project is configured to be built and verified using Maven. Run the following commands from the project root.
+## Verification Commands
+ Run the following commands from the project root.
 
 Compile Code
 mvn clean compile
